@@ -1,7 +1,7 @@
 {
     "name": "pg-binder",
-    "version": "1.0.1",
-    "description": "Bind JavaScript objects to safe PostgreSQL queries** – turn your plain objects into fully parameterized SQL with zero hassle.",
+    "version": "1.0.3",
+    "description": "Bind JavaScript objects to safe PostgreSQL queries – turn your plain objects into fully parameterized SQL with zero hassle.",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "type": "module",
@@ -26,6 +26,13 @@
     ],
     "author": "Avijit",
     "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/iam-avijit-me/pg-binder.git"
+    },
+    "bugs": {
+        "url": "https://github.com/iam-avijit-me/pg-binder/issues"
+    },
     "devDependencies": {
         "typescript": "^5.9.2"
     },

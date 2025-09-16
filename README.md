@@ -33,20 +33,19 @@ import { Pool } from 'pg';
 import pgSqlBind from 'pg-binder';
 
 const pool = new Pool({ /* your Postgres config */ });
-
 const query = `
   INSERT INTO products (name, price, stock)
   VALUES ($(name), $(price), $(stock))
   RETURNING *
 `;
 
-const data = {
-  name: 'Laptop',
-  price: 999.99,
-  stock: 50
-};
 
-const result = await pool.query(...pgSqlBind(query, data));
+const result = await pool.query(...pgSqlBind(query, {
+    name: 'Laptop',
+    price: 999.99,
+    stock: 50
+}));
+
 console.log(result.rows[0]);
 ```
 
