@@ -1,0 +1,38 @@
+{
+    "name": "pg-binder",
+    "version": "1.0.1",
+    "description": "Bind JavaScript objects to safe PostgreSQL queries** – turn your plain objects into fully parameterized SQL with zero hassle.",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "type": "module",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "postpublish": "rm -rf dist",
+        "dev": "tsc --watch",
+        "test": "node dist/test.js"
+    },
+    "keywords": [
+        "postgres",
+        "pg",
+        "postgresql",
+        "object-mapper",
+        "jsonb",
+        "typescript",
+        "pg-binder",
+        "esm"
+    ],
+    "author": "Avijit",
+    "license": "MIT",
+    "devDependencies": {
+        "typescript": "^5.9.2"
+    },
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "require": "./dist/index.js"
+        }
+    }
+}
